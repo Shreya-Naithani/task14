@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+  function checking (){
+    event.preventDefault();
+    const num = document.getElementById('check').value;
+    console.log(num);
+    if(num%2 === 0){
+        let num1 = document.getElementById('result');
+        num1.innerHTML=`
+          <h3>Checking whether no is even or odd</h3>
+          <p>The no. ${num} is even</p>
+        `
+    }
+    else{
+        let num1 = document.getElementById('result');
+        num1.innerHTML=`
+          <h3>Checking whether no is even or odd</h3>
+          <p>The no. ${num} is odd</p>
+        `
+    }
+  }
+    </script>
+</head>
+<body>
+    <h1>Even Odd Checking</h1>
+    <form>
+        <label>Enter a no</label>
+        <input type="number" id="check" placeholder="enter no"/>
+        <button onclick="checking()">Check</button>
+    </form>
+    <div id="result"></div>
+</body>
+</html>
